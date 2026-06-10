@@ -8,9 +8,9 @@ from app.prompts import MIN_SCORE
 from app.retriever import Retriever
 
 DEMO_QUESTIONS = [
-    "Какие проблемы связаны с доставкой?",
-    "Что клиенты пишут о качестве товара?",
-    "Какие жалобы связаны с возвратом денег?",
+    "Что пишут о качестве?",
+    "Что пишут о доставке?",
+    "Что пишут о ткани?",
     "Как оформить ипотеку?",
 ]
 
@@ -50,9 +50,9 @@ def render_sources(sources: list[dict]) -> None:
 
 
 def main() -> None:
-    st.set_page_config(page_title="RAG по обращениям клиентов", layout="wide")
-    st.title("RAG по обращениям клиентов")
-    st.caption("Учебный RAG по обращениям клиентов маркетплейса")
+    st.set_page_config(page_title="RAG по отзывам покупателей", layout="wide")
+    st.title("RAG по отзывам покупателей")
+    st.caption("Учебный RAG по отзывам о женской одежде и аксессуарах")
 
     if not index_exists():
         st.error(

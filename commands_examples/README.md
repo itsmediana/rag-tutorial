@@ -1,11 +1,23 @@
-# Примеры команд (промптов)
+### 1. Сборка индекса
 
-Основные промпты, которыми задаётся работа над проектом.
+![Сборка индекса](doc/screenshots/01_build_index.png)
 
-| Файл | О чём |
-|------|--------|
-| [01_planning_phase.md](01_planning_phase.md) | Этап планирования RAG-проекта |
-| [02_vision_sequential.md](02_vision_sequential.md) | @vision.md по разделам |
-| [03_conventions.md](03_conventions.md) | @conventions.md для code-ассистента |
-| [04_tasklist.md](04_tasklist.md) | @tasklist.md — итерационный план |
-| [05_workflow.md](05_workflow.md) | @workflow.md — правила работы по tasklist |
+### 2. Прохождение тестов
+
+![Тесты прошли](doc/screenshots/02_pytest_passed.png)
+
+### 3. Demo-вопрос про качество
+
+![Demo-вопрос про качество](doc/screenshots/03_streamlit_quality.png)
+
+### 4. Demo-вопрос про доставку
+
+![Demo-вопрос про доставку](doc/screenshots/04_streamlit_delivery.png)
+
+### 5. Demo-вопрос про ткань
+
+![Demo-вопрос про ткань](doc/screenshots/05_streamlit_fabric.png)
+
+### 6. Negative-вопрос
+
+![Negative-вопрос](doc/screenshots/06_streamlit_negative.png)

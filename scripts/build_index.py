@@ -8,6 +8,13 @@ from pathlib import Path
 import scipy.sparse
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+RUSSIAN_STOP_WORDS = [
+    "как", "что", "это", "по", "о", "об", "в", "на", "и", "или", "для",
+    "из", "с", "со", "к", "у", "от", "за", "про", "не", "нет",
+    "покупатели", "покупатель", "пишут", "пишет", "отзыв", "отзыва",
+]
+
+
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -24,7 +31,7 @@ from ingest import run as ingest_run
 
 
 def build_tfidf(texts: list[str]) -> tuple[TfidfVectorizer, scipy.sparse.csr_matrix]:
-    vectorizer = TfidfVectorizer()
+    vectorizer = TfidfVectorizer(stop_words=RUSSIAN_STOP_WORDS, token_pattern=r"(?u)\b[а-яА-ЯёЁa-zA-Z]{3,}\b")
     matrix = vectorizer.fit_transform(texts)
     return vectorizer, matrix
 
